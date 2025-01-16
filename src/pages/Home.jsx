@@ -5,7 +5,10 @@ function Home() {
   return (
     <>
       <Header />
+      <div className='w-full h-screen flex items-center justify-center bg-gray-300'>
         <h1>Home</h1>
+      </div>
+        
     </>
   );
 }
