@@ -7,6 +7,7 @@ function LogIn() {
         <Header />
         <div className='w-full h-screen flex items-center justify-center bg-gray-300'>
           <h1>LogIn</h1>
+        <input type="text" placeholder="Username" />
         </div>
         
     </>
