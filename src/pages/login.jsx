@@ -9,6 +9,7 @@ function LogIn() {
           <h1>LogIn</h1>
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
+        <button>Log In</button>
         </div>
         
     </>
