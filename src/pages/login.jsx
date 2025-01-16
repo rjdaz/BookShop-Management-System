@@ -10,6 +10,7 @@ function LogIn() {
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
         <button>Log In</button>
+        <button>Clear</button>
         </div>
         
     </>
