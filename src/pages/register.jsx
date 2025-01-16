@@ -5,7 +5,10 @@ function Registration() {
   return (
     <>
         <Header />
-        <h1>Registration</h1>
+        <div className='w-full h-screen flex items-center justify-center bg-gray-300'>
+          <h1>Registration</h1>
+        </div>
+        
     </>
   );
 }
