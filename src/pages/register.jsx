@@ -14,7 +14,7 @@ function Registration() {
 
   return (
     <>
-        <Header />
+        {/* <Header /> */}
         <div className='w-full h-screen flex items-center justify-center bg-gray-300'>
           <div 
             className='w-2/5 h-3/5 bg-slate-400 rounded-lg  shadow-lg flex flex-col items-center'>

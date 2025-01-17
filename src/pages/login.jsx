@@ -1,25 +1,40 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
-function LogIn() {
+function LogIn({ setIsAuthenticated, isAuthenticated }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
 
   const loginPage = (e) => {
     console.log('Username:', username);
     console.log('Password:', password);
 
     if (username === 'admin' && password === 'admin') {
-      window.location.href = '/home';
+      setIsAuthenticated(true);
+      //window.location.href = '/admin';
+      //navigate('/admin');
+      setTimeout(() => navigate('/admin'), 1000);
+      
+    }else if (username === 'user' && password === 'user') {
+      setIsAuthenticated(true);
+      //window.location.href = '/home';
+      //navigate('/home');
+      setTimeout(() => navigate('/home'), 1000);
+      
     }else {
       alert('Invalid Username or Password');
     }
   };
-  
+
+  //console.log('isAuthenticated:', isAuthenticated);
+
   return (
     <>
-      <Header />
+      {/* <Header isAuthenticated={isAuthenticated}/> */}
       <div 
         className='w-full h-screen flex items-center justify-center bg-gray-300'>
         <div 
@@ -36,7 +51,9 @@ function LogIn() {
             className=' w-3/5 h-8 border-2 border-gray-500 mt-10 pl-3'
             id='username'
             value={username}
-            onChange={(e) => setUsername(e.target.value)}/>
+            onChange={(e) => {
+              setUsername(e.target.value);
+              }}/>
           <input 
             type="password" 
             placeholder="Password" 
