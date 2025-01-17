@@ -17,13 +17,13 @@ function LogIn({ setIsAuthenticated, isAuthenticated }) {
       setIsAuthenticated(true);
       //window.location.href = '/admin';
       //navigate('/admin');
-      setTimeout(() => navigate('/admin'), 1000);
+      navigate('/admin');
       
     }else if (username === 'user' && password === 'user') {
       setIsAuthenticated(true);
       //window.location.href = '/home';
       //navigate('/home');
-      setTimeout(() => navigate('/home'), 1000);
+      navigate('/home');
       
     }else {
       alert('Invalid Username or Password');
