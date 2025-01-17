@@ -3,10 +3,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
-function LogIn({ setIsAuthenticated, isAuthenticated }) {
+function LogIn({ setIsAuthenticated}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
   const loginPage = (e) => {
@@ -15,26 +14,17 @@ function LogIn({ setIsAuthenticated, isAuthenticated }) {
 
     if (username === 'admin' && password === 'admin') {
       setIsAuthenticated(true);
-      //window.location.href = '/admin';
-      //navigate('/admin');
-      navigate('/admin');
-      
+      navigate('/admin');    
     }else if (username === 'user' && password === 'user') {
       setIsAuthenticated(true);
-      //window.location.href = '/home';
-      //navigate('/home');
-      navigate('/home');
-      
+      navigate('/home');  
     }else {
       alert('Invalid Username or Password');
     }
   };
 
-  //console.log('isAuthenticated:', isAuthenticated);
-
   return (
     <>
-      {/* <Header isAuthenticated={isAuthenticated}/> */}
       <div 
         className='w-full h-screen flex items-center justify-center bg-gray-300'>
         <div 

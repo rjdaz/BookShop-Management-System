@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
 import bookstoreImage from '../images/bookstore.webp';
 
 function Home() {
   return (
     <>
-      {/* <Header isAuthenticated={isAuthenticated}/> */}
       <div className='w-full h-screen flex bg-gray-300'>
         <div className='w-4/6 h-full flex bg-gray-300' >
           <div className='w-1/4 h-56 bg-slate-300 m-4 rounded-lg shadow-lg'>

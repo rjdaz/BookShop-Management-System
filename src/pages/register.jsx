@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import Header from '../components/Header';
-import { use } from 'react';
 
 function Registration() {
   const [username, setUsername] = useState('');
@@ -14,7 +12,6 @@ function Registration() {
 
   return (
     <>
-        {/* <Header /> */}
         <div className='w-full h-screen flex items-center justify-center bg-gray-300'>
           <div 
             className='w-2/5 h-3/5 bg-slate-400 rounded-lg  shadow-lg flex flex-col items-center'>

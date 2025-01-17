@@ -25,7 +25,6 @@ function App() {
           <Route path="/login" element={<LogIn setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/admin" element={<Admin isAuthenticated={isAuthenticated} />} />
-          {/* Add other routes as needed */}
         </Routes>
       </BrowserRouter>
     </div>
