@@ -1,18 +1,63 @@
 import React from 'react';
+import { useState } from 'react';
 import Header from '../components/Header';
 
 function LogIn() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const loginPage = (e) => {
+    console.log('Username:', username);
+    console.log('Password:', password);
+
+    if (username === 'admin' && password === 'admin') {
+      window.location.href = '/home';
+    }else {
+      alert('Invalid Username or Password');
+    }
+  };
+  
   return (
     <>
-        <Header />
-        <div className='w-full h-screen flex items-center justify-center bg-gray-300'>
-          <h1>LogIn</h1>
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button>Log In</button>
-        <button>Clear</button>
+      <Header />
+      <div 
+        className='w-full h-screen flex items-center justify-center bg-gray-300'>
+        <div 
+          className='w-1/4 h-1/2 flex flex-col items-center bg-gray-400 rounded-lg shadow-lg'>
+          <h1 
+            className='w-full h-1/5 mt-0 flex justify-center items-center text-4xl font-bold'>
+            Log In
+          </h1>
+          <div 
+            className='w-full h-4/5 selection:h-1/2 flex items-center flex-col '>
+          <input 
+            type="text" 
+            placeholder="Username" 
+            className=' w-3/5 h-8 border-2 border-gray-500 mt-10 pl-3'
+            id='username'
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}/>
+          <input 
+            type="password" 
+            placeholder="Password" 
+            className='w-3/5 h-8 border-2 border-gray-500 mt-6 pl-3'
+            id='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} />
+          <p 
+            className='mt-3 text-blue-700'>
+              <a href="/register">
+                Create New Account
+              </a>
+          </p>
+          <button 
+            className='w-3/5 bg-green-500 mt-8 h-10'
+            onClick={loginPage}>
+              Log In
+          </button>
+          </div>
         </div>
-        
+      </div>
     </>
   );
 }
